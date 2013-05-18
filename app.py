@@ -1,31 +1,21 @@
-from uuid import uuid4
+from flask import Flask, render_template
+ 
+app = Flask(__name__)      
+ 
+@app.route('/')
+def landingPage():
+    return render_template('landingPage.html')
 
-import web
-from couchdb.client import Server, PermanentView
+@app.route('/user/<username>')
+def show_user_profile(username=None):
+    # show the user profile for that user
+    return 'User %s' % username
 
-
-
-urls = ('/', 'main'
-        )
-
-app = web.application(urls, globals())
-render = web.template.render('templates/')
-
-session = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'count': 0})
-#DATABASE
-#sql_db = web.database(dbn='mysql', host="127.0.0.1", db='tweet_stream_db', port=3306, user='root', pw='hello123')
-
-
-# connect to the database
-s = Server()
-
-class user:
-    def GET(self):
-        values ={}
-        web.header('Content-Type', 'text/html')
-        return render.user(values);
-
+@app.route('/shortFilm/<moviename>')
+def show_post(moviename):
+    return 'Movie %s' % moviename
+ 
+ 
 if __name__ == '__main__':
-    app.run()
-
-    
+    app.debug = True
+    app.run(host='0.0.0.0', port=8123)
