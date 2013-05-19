@@ -36,11 +36,15 @@ def browse_movies_category(category):
 ##### Form submit urls
 ####
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login():
-	username = request.args['email']
-	password = request.args['password']
-	return 'Login succesfull %s %s',username,password
+	email="testing"
+	password="testing"
+
+	if request.method == 'POST':
+		email=request.form['email']
+		password=request.form['password']
+	return 'Login succesfull %s %s',email,password
 
 @app.route('/signup')
 def sign_up():

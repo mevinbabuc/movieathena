@@ -10,10 +10,10 @@
 
 	<div id="login">
 		<h2>Login</h2>
-		<form action="/login" method="GET">
+		<form action="{{ url_for('login') }}" method="POST">
 			<label>Username</label><input type="text" name="email" />
 			<label>Password</label><input type="password" name="password" />
-			<input type="submit" name="login" value="login"/>
+			<input type="submit" name="submit_login" value="login"/>
 		</form>
 	</div>
 
