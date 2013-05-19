@@ -27,6 +27,7 @@ div.welcome_text {
 }
  
 div.welcome_text h2 {
+color:white;
   font-size: 3em;
   margin-top: 40px;
   text-align: center;
@@ -34,6 +35,7 @@ div.welcome_text h2 {
 }
  
 div.welcome_text h3 {
+color:white;
   font-size: 1.7em;
   font-weight: 100;
   margin-top: 30px;

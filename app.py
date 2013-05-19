@@ -20,7 +20,7 @@ def show_movie(moviename):
     return 'Movie %s' % moviename
 
 @app.route('/<moviename>/about')
-def show_movie(moviename):
+def show_movie_analytics(moviename):
     return 'Movie %s analytics, cast and other details' % moviename
 
 @app.route('/Browse')
@@ -40,7 +40,7 @@ def browse_movies_category(category):
 def login(category):
     return ' Browse %s movies here' % category
 
-@app.route('/signup>')
+@app.route('/signup')
 def sign_up(category):
     return ' Browse %s movies here' % category
 
