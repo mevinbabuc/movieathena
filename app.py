@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template , request
  
 app = Flask(__name__)      
  
@@ -20,7 +20,7 @@ def show_movie(moviename):
     return 'Movie %s' % moviename
 
 @app.route('/<moviename>/about')
-def show_movie(moviename):
+def show_movie_about(moviename):
     return 'Movie %s analytics, cast and other details' % moviename
 
 @app.route('/Browse')
@@ -37,12 +37,14 @@ def browse_movies_category(category):
 ####
 
 @app.route('/login')
-def login(category):
-    return ' Browse %s movies here' % category
+def login(request=None):
+	username = request.args.get('username', '')
+	password = request.args.get('password', '')
+	return 'Login succesfull %s %s',username,password
 
-@app.route('/signup>')
-def sign_up(category):
-    return ' Browse %s movies here' % category
+@app.route('/signup')
+def sign_up():
+    return 'Signup succesfully proceed to login'
 
 ####
 ##### Error handlers

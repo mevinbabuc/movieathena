@@ -25,7 +25,10 @@
 
 <body>
 <div class="container-fluid">
-	<div class="container">{% block content %} {% endblock %}</div>
+	<div class="container">
+		{% block content %} {% endblock %}
+		{% block login %} {% endblock %}
+	</div>
 </div>
 
 	<script type="text/javascript" src="../static/js/jquery-1.8.3.min.js"></script>

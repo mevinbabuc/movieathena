@@ -1,7 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
   <div id="landingPage">
-    <h2>Welcome to the Flask app<h2>
-    <h3>This is the home page for the Flask app<h3>
+    <h2>Welcome to Movieathena<h2>
+    <h3>Upload and share your shortfilms<h3>
   </div>
+{% endblock %}
+
+{% block login %}
+
+	<div id="login">
+		<h2>Login</h2>
+		<form action="login" method="POST">
+			<label>Username</label><input type="text" name="email" />
+			<label>Password</label><input type="password" name="password" />
+			<input type="submit" name="login" value="login"
+		</form>
+	</div>
+
 {% endblock %}
