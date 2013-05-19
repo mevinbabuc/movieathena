@@ -9,7 +9,7 @@ def landingPage():
 @app.route('/user/<username>')
 def show_user_profile(username=None):
     # show the user profile for that user
-    return 'User %s' % username
+    return render_template('user.html',username=username)
 
 @app.route('/<moviename>')
 def show_post(moviename):
