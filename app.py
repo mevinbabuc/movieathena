@@ -20,7 +20,11 @@ def show_movie(moviename):
     return 'Movie %s' % moviename
 
 @app.route('/<moviename>/about')
+<<<<<<< HEAD
 def show_movie_about(moviename):
+=======
+def show_movie_analytics(moviename):
+>>>>>>> refs/remotes/origin/master
     return 'Movie %s analytics, cast and other details' % moviename
 
 @app.route('/Browse')
@@ -37,6 +41,7 @@ def browse_movies_category(category):
 ####
 
 @app.route('/login')
+<<<<<<< HEAD
 def login(request=None):
 	username = request.args.get('username', '')
 	password = request.args.get('password', '')
@@ -45,6 +50,14 @@ def login(request=None):
 @app.route('/signup')
 def sign_up():
     return 'Signup succesfully proceed to login'
+=======
+def login(category):
+    return ' Browse %s movies here' % category
+
+@app.route('/signup')
+def sign_up(category):
+    return ' Browse %s movies here' % category
+>>>>>>> refs/remotes/origin/master
 
 ####
 ##### Error handlers
