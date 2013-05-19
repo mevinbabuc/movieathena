@@ -1,4 +1,5 @@
 #landingPage {
+	overflow: hidden;
 	background: rgb(240,249,255); /* Old browsers */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZjMwMTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2YwNDA0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%);
@@ -12,16 +13,14 @@
 #landingPage > .container-fluid {
 	height: 700px;
 	display: block;
-	overflow: hidden;
+	position: relative;
 }
 
 #landingPage div.welcome_text {
 	padding: 10px 0 30px 0;
 	text-shadow: 1px 1px black;
-	position: relative;
-	top: 150px;
 }
-#landingPage div.welcome_text h2,#landingPage div.welcome_text h3{
+#landingPage div.welcome_text h2, #landingPage div.welcome_text h3 {
 	text-align: center;
 	color: white;
 	margin-top: 40px;
@@ -35,4 +34,19 @@
 	font-size: 1.7em;
 	font-weight: 100;
 	letter-spacing: -1px;
+}
+
+#landingPage #login {
+margin-top: 150px;	
+}
+#landingPage #login input {
+	padding: 9px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+#landingPage #login .input-block-level{
+	padding: 20px 12px;
+}
+#landingPage #login h4 {
+	color: white;
 }

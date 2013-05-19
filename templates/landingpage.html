@@ -13,14 +13,13 @@ id="landingPage"
 
 {% block login %}
 
-	<div id="login">
-		<h2>Login</h2>
-		<form action="{{ url_for('login') }}" method="POST">
-			<label>Username</label><input type="text" name="email" />
-			<label>Password</label><input type="password" name="password" />
-			<input type="submit" name="submit_login" value="login"/>
-		</form>
-	</div>
-
+<div id="login">
+	<h4>Login</h4>
+	<form autocomplete="off" action="{{ url_for('login') }}" method="POST">
+		<input class="input-block-level" type="text" name="email" placeholder="Username"/>
+		<input class="input-block-level" type="password" name="password" placeholder="Password"/>
+		<input class="btn btn-success btn-block" type="submit" name="submit_login" value="login"/>
+	</form>
+</div>
 
 {% endblock %}
