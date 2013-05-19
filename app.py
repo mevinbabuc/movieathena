@@ -37,9 +37,9 @@ def browse_movies_category(category):
 ####
 
 @app.route('/login')
-def login(request=None):
-	username = request.args.get('username', '')
-	password = request.args.get('password', '')
+def login():
+	username = request.args['email']
+	password = request.args['password']
 	return 'Login succesfull %s %s',username,password
 
 @app.route('/signup')
