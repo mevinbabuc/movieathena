@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Movie Athena</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="New World to the movies">
-<meta name="author" content="Mevin Babu C">
-<meta name="author" content="Anenth Vishnu">
-<!-- styles -->
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
-<link rel="stylesheet" href="../static/css/main.css">
-<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css">
-<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Athena</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="New World to the movies">
+		<meta name="author" content="Mevin Babu C">
+		<meta name="author" content="Anenth Vishnu">
+		<!-- styles -->
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/css/main.css">
+		<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="../static/css/font-awesome.min.css">
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-<!-- favicon  -->
-<link rel="shortcut icon" href="../static/favicon.ico">
+		<!-- favicon  -->
+		<link rel="shortcut icon" href="../static/favicon.ico">
 
-</head>
+	</head>
 
-<body>
-<div class="container-fluid">
-	<div class="container">
-		{% block content %} {% endblock %}
-		{% block login %} {% endblock %}
-	</div>
-</div>
+	<body {% block body_id %} {% endblock %}>
+		<div class="container-fluid">
+			<div class="container">
+				{% block content %} {% endblock %}
+				{% block login %} {% endblock %}
+			</div>
+		</div>
 
-	<script type="text/javascript" src="../static/js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../static/js/script.js"></script>
-</body>
+		<script type="text/javascript" src="../static/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../static/js/script.js"></script>
+	</body>
 </html>

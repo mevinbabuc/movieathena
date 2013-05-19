@@ -1,13 +1,18 @@
 {% extends "layout.html" %}
+
+{% block body_id %}
+{% endblock %}
+
 {% block content %}
-  <div id="landingPage">
-    <h2>Welcome to Movieathena<h2>
-    <h3>Upload and share your shortfilms<h3>
-  </div>
+<div class="welcome_text">
+	<h2>Welcome to Movieathena</h2>
+	<h3>Upload and share your shortfilms</h3>
+</div>
 {% endblock %}
 
 {% block login %}
 
+<<<<<<< Updated upstream
 	<div id="login">
 		<h2>Login</h2>
 		<form action="{{ url_for('login') }}" method="POST">
@@ -16,5 +21,6 @@
 			<input type="submit" name="submit_login" value="login"/>
 		</form>
 	</div>
+
 
 {% endblock %}
