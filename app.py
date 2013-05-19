@@ -23,11 +23,11 @@ def show_movie(moviename):
 def show_movie_about(moviename):
     return 'Movie %s analytics, cast and other details' % moviename
 
-@app.route('/Browse')
+@app.route('/browse')
 def browse_movies():
     return ' Browse movies'
 
-@app.route('/Browse/<category>')
+@app.route('/browse/<category>')
 def browse_movies_category(category):
     return ' Browse %s movies here' % category
  
