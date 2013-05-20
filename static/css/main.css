@@ -9,6 +9,7 @@ body {
 	text-shadow: none;
 	margin: 0;
 }
+
 .navbar .navbar-inner {
 	background: white;
 	color: red;
@@ -18,10 +19,11 @@ body {
 	margin-left: 20px;
 }
 .navbar .btn, .navbar .btn-group {
-	margin-top: 17px;
+	margin-top: 23px;
 }
 #landingPage {
-	overflow: hidden;
+	/*overflow: hidden;*/
+
 	background: rgb(240,249,255); /* Old browsers */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZjMwMTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2YwNDA0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%);
@@ -33,11 +35,11 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );
 }
 
-
 #landingPage div.welcome_text {
+
 	padding: 10px 0 30px 0;
 	text-shadow: 1px 1px black;
-	height: 500px;
+	text-align: center;
 }
 
 #landingPage div.welcome_text h2, #landingPage div.welcome_text h3 {
@@ -55,7 +57,15 @@ body {
 	font-weight: 100;
 	letter-spacing: -1px;
 }
-
+#landingPage .welcome_subblock h3{
+	margin-top: 6px !important;
+} 
+#landingPage .welcome_subblock i{
+	margin-top: 15px;
+	font-size: 5em;
+	display: block;
+	text-align: center;
+}
 #landingPage #signup_login {
 	margin-top: 50px;
 	position: relative;
@@ -89,8 +99,9 @@ body {
 #landingPage #signup {
 	display: block;
 }
+
 /*500*/
-.blue{
-	color: rgb(71, 143, 202)!important;
+.blue {
+	color: rgb(71, 143, 202) !important;
 }
 
