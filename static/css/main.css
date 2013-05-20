@@ -40,6 +40,7 @@ body {
 	padding: 10px 0 30px 0;
 	text-shadow: 1px 1px black;
 	text-align: center;
+	margin-top: 80px;
 }
 
 #landingPage div.welcome_text h2, #landingPage div.welcome_text h3 {

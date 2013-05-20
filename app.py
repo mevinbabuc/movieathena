@@ -8,12 +8,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def landingPage():
-    return render_template('landingPage.html')
+    values = {}
+    values["body_prop"] =  "id=landingPage"
+    return render_template('landingPage.html',values=values)
 
 @app.route('/user/<username>')
 def show_user_profile(username=None):
     # show the user profile for that user
-    return render_template('user.html', username=username)
+    values = {}
+    values["username"] =  username
+    return render_template('user.html', values=values)
 
 @app.route('/<moviename>')
 def show_movie(moviename):

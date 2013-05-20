@@ -28,7 +28,11 @@
 		<link rel="apple-touch-icon" href="../static/favicon.ico" />
 	</head>
 
-	<body {% block body_id %} {% endblock %}>
+	<body 
+	{% if values["body_prop"] %}
+	{{values["body_prop"]}}
+	{% endif %}
+	>
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container">
@@ -42,9 +46,13 @@
 						</div>
 					</form>
 					<ul class="nav pull-right">
+						{% if  values["username"] %}
+							{{ values["username"]}}
+						{% else %}	
 						<button id="button_login" class="btn btn-success">
 							Login
 						</button>
+						{% endif %}
 					</ul>
 				</div>
 			</div>

@@ -1,6 +1,8 @@
 /*
  *Author : Anenth
  */
+
+// Login/signup function
 var login_signup = function() {
 	var div_login = $("#login");
 	var div_signup = $("#signup");
