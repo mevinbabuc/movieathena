@@ -10,7 +10,7 @@ app = Flask(__name__)
 def landingPage():
     values = {}
     values["body_prop"] =  "id=landingPage"
-    return render_template('landingPage.html',values=values)
+    return render_template('landingpage.html',values=values)
 
 @app.route('/user/<username>')
 def show_user_profile(username=None):
