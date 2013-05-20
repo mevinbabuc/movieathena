@@ -4,22 +4,38 @@
 id="landingPage"
 {% endblock %}
 
-{% block content %}
+{% block left_part %}
 <div class="welcome_text">
 	<h2>Welcome to Movieathena</h2>
 	<h3>Upload and share your shortfilms</h3>
 </div>
 {% endblock %}
 
-{% block login %}
+{% block right_part %}
+<div id="signup_login">
+	<div id="login">
+		<h4>Login</h4>
+		<form autocomplete="off" action="{{ url_for('login') }}" method="post">
+			<input class="input-block-level" type="text" name="email" placeholder="Username"/>
+			<input class="input-block-level" type="password" name="password" placeholder="Password"/>
+			<input class="btn btn-success btn-block" type="submit" name="submit_login" value="login"/>
+		</form>
+	</div>
 
-<div id="login">
-	<h4>Login</h4>
-	<form autocomplete="off" action="{{ url_for('login') }}" method="POST">
-		<input class="input-block-level" type="text" name="email" placeholder="Username"/>
-		<input class="input-block-level" type="password" name="password" placeholder="Password"/>
-		<input class="btn btn-success btn-block" type="submit" name="submit_login" value="login"/>
-	</form>
+	<div id="signup">
+		<h4>Sign up</h4>
+		<form autocomplete="off" action="{{ url_for('login') }}" method="post">
+			<input class="input-block-level" type="text" name="username" placeholder="Pick a username"/>
+			<input class="input-block-level" type="email" name="email" placeholder="Your email"/>
+			<input class="input-block-level" type="password" name="password" placeholder="Create a password"/>
+			<p class="note">
+				Tip: use at least one number and at least 7 characters.
+			</p>
+			<p>
+				By clicking on "Sign up" below, you agree to the <a href="#">Terms of Service</a> and the <a  href="#">Privacy Policy.</a>
+			</p>
+			<input class="btn btn-success btn-block" type="submit" name="submit_login" value="Sign up"/>
+		</form>
+	</div>
 </div>
-
 {% endblock %}

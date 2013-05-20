@@ -1,3 +1,25 @@
+body {
+	color: white;
+}
+.navbar .brand {
+	padding: 33px 20px 13px;
+	font-family: 'Stalemate', cursive;
+	font-size: 4em;
+	color: darkred;
+	text-shadow: none;
+	margin: 0;
+}
+.navbar .navbar-inner {
+	background: white;
+	color: red;
+}
+.navbar-form .input-append, .navbar-form .input-prepend {
+	margin-top: 23px;
+	margin-left: 20px;
+}
+.navbar .btn, .navbar .btn-group {
+	margin-top: 17px;
+}
 #landingPage {
 	overflow: hidden;
 	background: rgb(240,249,255); /* Old browsers */
@@ -10,16 +32,14 @@
 	background: radial-gradient(ellipse at center, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );
 }
-#landingPage > .container-fluid {
-	height: 700px;
-	display: block;
-	position: relative;
-}
+
 
 #landingPage div.welcome_text {
 	padding: 10px 0 30px 0;
 	text-shadow: 1px 1px black;
+	height: 500px;
 }
+
 #landingPage div.welcome_text h2, #landingPage div.welcome_text h3 {
 	text-align: center;
 	color: white;
@@ -36,17 +56,41 @@
 	letter-spacing: -1px;
 }
 
-#landingPage #login {
-margin-top: 150px;	
+#landingPage #signup_login {
+	margin-top: 50px;
+	position: relative;
 }
-#landingPage #login input {
+#landingPage #signup_login input {
 	padding: 9px;
 	font-size: 16px;
 	border-radius: 5px;
 }
-#landingPage #login .input-block-level{
+#landingPage #signup_login .input-block-level {
 	padding: 20px 12px;
 }
-#landingPage #login h4 {
+#landingPage #signup_login h4 {
 	color: white;
+	font-size: 1.5em;
+	margin-left: -12px;
+	margin-bottom: 16px;
 }
+#landingPage #signup p {
+
+	font-size: .9em;
+}
+#landingPage #signup .note {
+	margin-top: 7px;
+	color: rgb(200,200,200);
+	font-size: .9em;
+}
+#landingPage #login, #landingPage #signup {
+	display: none;
+}
+#landingPage #signup {
+	display: block;
+}
+/*500*/
+.blue{
+	color: rgb(71, 143, 202)!important;
+}
+

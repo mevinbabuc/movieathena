@@ -13,7 +13,7 @@ def landingPage():
 @app.route('/user/<username>')
 def show_user_profile(username=None):
     # show the user profile for that user
-    return render_template('user.html',username=username)
+    return render_template('user.html', username=username)
 
 @app.route('/<moviename>')
 def show_movie(moviename):
@@ -38,14 +38,14 @@ def browse_movies_category(category):
 
 @app.route('/login', methods=['POST'])
 def login():
-    email="testing"
-    password="testing"
+    email = "testing"
+    password = "testing"
 
     if request.method == 'POST':
         if "email" in request.form:
-            email=request.form['email']
+            email = request.form['email']
         if "password" in request.form:
-            password=request.form['password']
+            password = request.form['password']
 
     return 'Login succesfull'
 
@@ -61,6 +61,9 @@ def sign_up():
 def not_found(error):
     return "Better luck next time :P", 404
 
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('500.html'), 500
 
 if __name__ == '__main__':
     app.debug = True
