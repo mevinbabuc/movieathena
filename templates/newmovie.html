@@ -1,0 +1,28 @@
+<form action="upload" method="POST">
+
+<input type="text" name="name" />
+<input type="text" name="youtubeurl" />
+<input type="text" name="title" />
+
+<!-- dynamic field to add tags -->
+<input type="text" name="tags" />
+<!-- in the v1.0 the user can just select one category out of a drop-down-list -->
+
+<input type="text" name="description" />
+
+<!-- uploader's role -->
+<input type="text" name="role" />
+
+<!-- dynamic field to add people and role -->
+<input type="text" name="crew_name_1" /> <input type="text" name="crew_role_1" />
+<!--type email address and name, if the person is not there on movieathena. 
+	we'll send him a request through fb and mail -->
+
+
+</form>
+
+<!--
+	This is the exact scenario where we need couchdb/Mongodb ,
+	to deal with dynamic forms.
+	Or just make a table for each movie :-/ and store everything about the movie there
+-->
