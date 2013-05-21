@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
-{% block content %}
-  <div class="jumbo">
-    <h2>Welcome to the Movieathena, {{ username }}<h2>
-    <h3>This is where you roll!<h3>
-  </div>
+{% block whole_width %}
+<div class="row">
+	<div class="span4">
+		<img >
+	</div>
+	<div class="span8">
+	
+		{{ values["username"]}}
+
+	</div>
+
+</div>
+
 {% endblock %}
