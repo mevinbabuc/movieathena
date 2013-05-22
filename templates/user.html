@@ -1,15 +1,51 @@
 {% extends "layout.html" %}
 {% block whole_width %}
-<div class="row">
-	<div class="span4">
-		<img >
+<div class="container profile_page">
+	<div class="row">
+
+		<div class="profile_pic">
+			<img src='../static/assets_user/achu.jpg'>
+		</div>
 	</div>
-	<div class="span8">
-	
-		{{ values["username"]}}
+	<div class="row">
+		<div class="offset1 span5 profile_leftpart">
+			<h3>{{ values["username"]}}</h3>
+			<h4>23 years old</h4>
+			<h3> Field of work</h3>
+			<span class="label tags">Photography</span>
+			<span class="label tags">Directing</span>
+		</div>
+		<div class="offset1 span4 profile_rightpart">
+			<h3> Achivements</h3>
+			<span class="label tags">Created 10 ShortMovies</span>
+			<span class="label tags">10k Hit</span>
+		</div>
 
 	</div>
+	<div class="row">
+		<div class="offset1 span11">
+			<ul id="og-grid" class="og-grid">
+				<li>
+					<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="../static/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="../static/images/thumbs/1.jpg" alt="img01"/> </a>
+				</li>
+				<li>
+					<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="../static/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="../static/images/thumbs/2.jpg" alt="img02"/> </a>
+				</li>
+				<li>
+					<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="../static/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="../static/images/thumbs/3.jpg" alt="img03"/> </a>
+				</li>
+			</ul>
 
-</div>
+		</div>
+	</div>
 
-{% endblock %}
+	{% endblock %}
+
+{% block script %}
+	<script src="../static/js/grid.js"></script>
+	<script>
+		$(function() {
+			Grid.init();
+		});
+	</script>
+	{% endblock %}

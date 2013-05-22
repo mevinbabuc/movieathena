@@ -16,6 +16,7 @@ def landingPage():
 def show_user_profile(username=None):
     # show the user profile for that user
     values = {}
+    values["body_prop"] =  "id=profile"
     values["username"] =  username
     return render_template('user.html', values=values)
 
