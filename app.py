@@ -74,7 +74,9 @@ def show_movie_about(moviename):
 
 @app.route('/browse')
 def browse_movies():
-    return ' Browse movies'
+    values = {}
+    values["body_prop"] =  "id=explore"
+    return render_template('explore.html', values=values)
 
 @app.route('/browse/<category>')
 def browse_movies_category(category):
