@@ -1,6 +1,12 @@
 from flask import Flask, render_template , request
+import MySQLdb as mdb
  
 app = Flask(__name__)      
+
+####
+##### App configurations
+####
+
  
 ####
 ##### App structure
@@ -15,9 +21,47 @@ def landingPage():
 @app.route('/user/<username>')
 def show_user_profile(username=None):
     # show the user profile for that user
+    artist=""
+    shortfilms=""
+    con=""
     values = {}
+
     values["body_prop"] =  "id=profile"
-    values["username"] =  username
+
+    try:
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        cur = con.cursor()
+        cur.execute("select * from artists")
+        artist = cur.fetchone()
+
+        #artist data
+        values["id_artist"] =  artist[0]
+        values["name"] =  artist[1]
+        values["email"] =  artist[2]
+        values["work_field"] =  artist[3]
+        values["fb_link"] =  artist[4]
+        values["twitter_link"] =  artist[5]
+
+        cur.execute("select * from shortfilms where id_artist=%s",artist[0])
+        shortfilms=cur.fetchall()
+
+        #shortfilms
+        movies={}
+        i=0
+        for shortfilm in shortfilms:
+            movies[i]={"id_shortfilm":shortfilm[0],"name":shortfilm[1],"youtube_link":shortfilm[3]}
+            i=i+1
+
+        values["shortfilms"]=movies
+        values["count"]=i-1
+
+
+    except mdb.Error, e:
+        print "Error %d: %s" % (e.args[0],e.args[1])
+    finally:
+        if con:    
+            con.close()
+
     return render_template('user.html', values=values)
 
 @app.route('/<moviename>')
@@ -30,9 +74,7 @@ def show_movie_about(moviename):
 
 @app.route('/browse')
 def browse_movies():
-    values = {}
-    values["body_prop"] =  "id=explore"
-    return render_template('explore.html', values=values)
+    return ' Browse movies'
 
 @app.route('/browse/<category>')
 def browse_movies_category(category):
