@@ -3,8 +3,10 @@
 {% block left_part %}
 <div class="welcome_text">
 	<h2>Welcome to Movie athena </h2>
-	<h3>Upload and share your shortfilms</h3>
-
+	<h3>Grab your camera and start filming</h3>
+	<a class="btn btn-success" href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
+	<a class="btn btn-success" href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
+	<a class="btn button_explore btn-warning" href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
 </div>
 {% endblock %}
 

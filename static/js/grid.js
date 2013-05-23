@@ -344,7 +344,7 @@ var Grid = (function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#">Visit website</a>' );
+			this.$href = $( '<a href="#">Visit Movie Page</a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -431,6 +431,7 @@ var Grid = (function() {
 					}
 					self.$item.removeClass( 'og-expanded' );
 					self.$previewEl.remove();
+					
 				};
 
 			setTimeout( $.proxy( function() {
@@ -440,9 +441,9 @@ var Grid = (function() {
 				}
 				this.$previewEl.css( 'height', 0 );
 				// the current expanded item (might be different from this.$item)
-				var $expandedItem = $items.eq( this.expandedIdx );
+				var $expandedItem = $items.eq( this.expandedIdx - 1);
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
-
+				
 				if( !support ) {
 					onEndFn.call();
 				}

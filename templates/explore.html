@@ -1,59 +1,14 @@
 {% extends "layout.html" %}
 {% block whole_width %}
+<div class="container">
 
-<div class="container profile_page">
-	<div class="row">
-
-		<div class="profile_pic">
-			<img src='../static/assets_user/achu.jpg'>
-		</div>
-	</div>
-	<div class="row">
-		<div class="offset1 span5 profile_leftpart">
-			<h3>{{ values["username"] }}</h3>
-			<h4>23 years old</h4>
-			<h3> Field of work</h3>
-			<span class="label tags">Photography</span>
-			<span class="label tags">Directing</span>
-			<!--@TODO shown only when user logged in -->
-			<div class="uesr_options">
-				<ul class="nav nav-list">
-					<li class="nav-header">
-						Options
-					</li>
-					<li >
-						<a  href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
-					</li>
-					<li>
-				<a href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
-					</li>
-					<li>
-				<a href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
-					</li>
-				</ul>
-				<!-- <a class="btn btn-success" href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
-				<br>
-				<a class="btn btn-success" href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
-				<br>
-				<a class="btn btn-warning" href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
-				<br> -->
-			</div>
-		</div>
-		<div class="offset1 span4 profile_rightpart">
-			<h3> Achivements</h3>
-			<span class="label tags">Created 10 ShortMovies</span>
-			<span class="label tags">10k Hit</span>
-
-		</div>
-
-	</div>
 	<div class="row">
 		<div class="span12">
 
 			<ul id="og-grid" class="og-grid">
-				<h3> My Works</h3>
+				<h3 class="og-grid_heading"> My Works</h3>
 				<li>
-					<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="../static/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="../static/images/thumbs/1.jpg" alt="img01"/> </a>
+					<a href="{{ url_for('show_movie',moviename='hello') }}" data-largesrc="../static/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="../static/images/thumbs/1.jpg" alt="img01"/> </a>
 				</li>
 				<li>
 					<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="../static/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="../static/images/thumbs/2.jpg" alt="img02"/> </a>
@@ -146,17 +101,15 @@
 
 		</div>
 	</div>
-</div>
-{% endblock %}
 
-{% block script %}
+	{% endblock %}
 
-<script src="../static/js/grid.js"></script>
-<script>
-	$(function() {
-		Grid.init();
-	});
+	{% block script %}
 
-</script>
-
-{% endblock %}
+	<script src="../static/js/grid.js"></script>
+	<script>
+		$(function() {
+			Grid.init();
+		});
+	</script>
+	{% endblock %}
