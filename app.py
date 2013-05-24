@@ -76,10 +76,62 @@ def show_movie_about(moviename):
 def browse_movies():
     values = {}
     values["body_prop"] =  "id=explore"
+
+
+    try:
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        cur = con.cursor()
+
+        cur.execute("select * from shortfilms")
+        shortfilms=cur.fetchall()
+
+        #shortfilms
+        movies={}
+        i=0
+        for shortfilm in shortfilms:
+            movies[i]={"id_shortfilm":shortfilm[0],"name":shortfilm[1],"youtube_link":shortfilm[3],"category":shortfilm[5]}
+            i=i+1
+
+        values["shortfilms"]=movies
+        values["count"]=i-1
+
+
+    except mdb.Error, e:
+        print "Error %d: %s" % (e.args[0],e.args[1])
+    finally:
+        if con:    
+            con.close()
+
+
     return render_template('explore.html', values=values)
 
 @app.route('/browse/<category>')
 def browse_movies_category(category):
+
+    try:
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        cur = con.cursor()
+
+        cur.execute("select * from shortfilms where category=%s",category)
+        shortfilms=cur.fetchall()
+
+        #shortfilms
+        movies={}
+        i=0
+        for shortfilm in shortfilms:
+            movies[i]={"id_shortfilm":shortfilm[0],"name":shortfilm[1],"youtube_link":shortfilm[3],"category":shortfilm[5]}
+            i=i+1
+
+        values["shortfilms"]=movies
+        values["count"]=i-1
+
+
+    except mdb.Error, e:
+        print "Error %d: %s" % (e.args[0],e.args[1])
+    finally:
+        if con:    
+            con.close()
+
     return ' Browse %s movies here' % category
  
 

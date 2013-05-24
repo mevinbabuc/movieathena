@@ -61,7 +61,7 @@
 				<h3> My Works</h3>
 				{% for i in values["shortfilms"] %}
 					<li>
-							<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}" height="200" width="300" ></iframe>
+							<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
 							<br/>
 							<span>{{ values["shortfilms"][i]["name"] }}</span>
 					</li>
