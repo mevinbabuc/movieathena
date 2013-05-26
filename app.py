@@ -78,7 +78,7 @@ def show_movie(urlmoviename):
         if shortfilm == None:
             abort(404)
         else:
-            cur.execute("select * from artist_shortfilms where id_shortfilms=%s",shortfilm[0])
+            cur.execute("SELECT * FROM artistlist where shortfilm=%s",shortfilm[0])
             artists=cur.fetchall()
 
 
@@ -88,7 +88,7 @@ def show_movie(urlmoviename):
         if con:    
             con.close()
 
-    return 'Movie %s' % str(shortfilm)
+    return 'Movie %s %s' % (str(shortfilm),str(artists))
 
 @app.route('/<moviename>/about')
 def show_movie_about(moviename):
