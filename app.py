@@ -1,4 +1,4 @@
-from flask import Flask, render_template , request
+from flask import Flask,render_template ,request,abort
 import MySQLdb as mdb
  
 app = Flask(__name__)      
@@ -7,7 +7,8 @@ app = Flask(__name__)
 ##### App configurations
 ####
 
- 
+app.secret_key = 'development key'
+
 ####
 ##### App structure
 ####
@@ -64,9 +65,30 @@ def show_user_profile(username=None):
 
     return render_template('user.html', values=values)
 
-@app.route('/<moviename>')
-def show_movie(moviename):
-    return 'Movie %s' % moviename
+@app.route('/<urlmoviename>')
+def show_movie(urlmoviename):
+    moviename=urlmoviename.lower().replace("-"," ")
+    shortfilm="boo"
+    try:
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        cur = con.cursor()
+
+        cur.execute("select * from shortfilms where name=%s",moviename)
+        shortfilm=cur.fetchone()
+        if shortfilm == None:
+            abort(404)
+        else:
+            cur.execute("select * from artist_shortfilms where id_shortfilms=%s",shortfilm[0])
+            artists=cur.fetchall()
+
+
+    except mdb.Error, e:
+        print "Error %d: %s" % (e.args[0],e.args[1])
+    finally:
+        if con:    
+            con.close()
+
+    return 'Movie %s' % str(shortfilm)
 
 @app.route('/<moviename>/about')
 def show_movie_about(moviename):
@@ -162,7 +184,7 @@ def sign_up():
 
 @app.errorhandler(404)
 def not_found(error):
-    return "Better luck next time :P", 404
+    return "Signup to get that url !", 404
 
 @app.errorhandler(500)
 def internal_server_error(error):

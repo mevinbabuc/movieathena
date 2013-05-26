@@ -9,18 +9,17 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="offset1 span5 profile_leftpart">
-			<h3>{{ values["username"] }}</h3>
-			<h4>23 years old</h4>
+		<div itemscope itemtype="http://data-vocabulary.org/Person" class="offset1 span5 profile_leftpart">
+			<h4 itemprop="name">{{ values["name"] }}</h4>
+			<h3 itemprop="age">23 years old</h3>
 			<h3> Field of work</h3>
-			<span class="label tags">{{ values["work_field"] }}</span>
+			<span class="label tags" itemprop="role">{{ values["work_field"] }}</span>
+			<span class="label tags" itemprop="url">{{ values["fb_link"] }}</span>
+			<span class="label tags" itemprop="url">{{ values["twitter_link"] }}</span>
+			<span class="label tags" itemprop="url">{{ values["email"] }}</span>
 
 		</div>
-		<meta name="artist" content="{{ values["name"] }}">
-		<meta name="facebook" content="{{ values["fb_link"] }}">
-		<meta name="twitter" content="{{ values["twitter_link"] }}">
-		<meta name="email" content="{{ values["email"] }}">
-		<meta name="role" content="{{ values["work_field"] }}">
+
 
 			<!--@TODO shown only when user logged in -->
 			<div class="uesr_options">

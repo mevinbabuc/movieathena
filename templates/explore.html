@@ -8,11 +8,11 @@
 			<ul id="og-grid" class="og-grid">
 				<h3 class="og-grid_heading"> My Works</h3>
 				{% for i in values["shortfilms"] %}
-					<li>
+					<li itemscope itemtype ="http://schema.org/Movie">
 							<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
 							<br/>
-							<span>{{ values["shortfilms"][i]["name"] }}</span>
-							<span class="label tags">{{ values["shortfilms"][i]["category"] }}</span>
+							<span itemprop="name">{{ values["shortfilms"][i]["name"] }}</span>
+							<span class="label tags" itemprop="genre">{{ values["shortfilms"][i]["category"] }}</span>
 
 					</li>
 				{% endfor %}
