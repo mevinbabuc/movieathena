@@ -7,7 +7,7 @@ app = Flask(__name__)
 ##### App configurations
 ####
 
-app.secret_key = 'development key'
+app.secret_key = 'aplha_pressure_cooker_omega'
 
 ####
 ##### App structure
