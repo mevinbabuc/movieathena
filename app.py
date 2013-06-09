@@ -30,7 +30,7 @@ def show_user_profile(username=None):
     values["body_prop"] =  "id=profile"
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
         cur.execute("select * from artists")
         artist = cur.fetchone()
@@ -70,7 +70,7 @@ def show_movie(urlmoviename):
     moviename=urlmoviename.lower().replace("-"," ")
     shortfilm="boo"
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where name=%s",moviename)
@@ -101,7 +101,7 @@ def browse_movies():
 
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms")
@@ -109,13 +109,13 @@ def browse_movies():
 
         #shortfilms
         movies={}
-        i=0
+        i=-1
         for shortfilm in shortfilms:
             movies[i]={"id_shortfilm":shortfilm[0],"name":shortfilm[1],"youtube_link":shortfilm[3],"category":shortfilm[5]}
             i=i+1
 
         values["shortfilms"]=movies
-        values["count"]=i-1
+        values["count"]=i
 
 
     except mdb.Error, e:
@@ -129,9 +129,9 @@ def browse_movies():
 
 @app.route('/browse/<category>')
 def browse_movies_category(category):
-
+    values = {}
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where category=%s",category)
@@ -139,13 +139,13 @@ def browse_movies_category(category):
 
         #shortfilms
         movies={}
-        i=0
+        i=-1
         for shortfilm in shortfilms:
             movies[i]={"id_shortfilm":shortfilm[0],"name":shortfilm[1],"youtube_link":shortfilm[3],"category":shortfilm[5]}
             i=i+1
 
         values["shortfilms"]=movies
-        values["count"]=i-1
+        values["count"]=i
 
 
     except mdb.Error, e:

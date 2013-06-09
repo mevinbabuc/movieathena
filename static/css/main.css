@@ -8,6 +8,11 @@
 body {
 
 }
+.label {
+
+min-height: auto;
+}
+
 .navbar {
 	margin-bottom: 0;
 }
@@ -237,14 +242,46 @@ span.input-icon #nav-search-icon {
 	color: rgb(71, 143, 202) !important;
 }
 #explore .container-fluid {
-	background: lightgoldenrodyellow;
+
 }
 
-#explore .og-grid {
-	border: none;
+#explore .tags{
+	background-color: rgb(55, 159, 21);
 }
-#explore .og-grid .og-grid_heading {
-	display: none;
+#explore  #movie-grid{
+	list-style: none;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	
+}
+#movie-grid li {
+	display: inline-block;
+	margin: 25px;
+	vertical-align: top;
+	
+	position: relative;
+}
+
+#movie-grid li > a, #movie-grid li > a img {
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+}
+#movie-grid li span.movie-name{
+	display: block;
+	height:30px;
+	text-align: left;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+#movie-grid li span.tags{
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 .og-grid {
 	list-style: none;
@@ -339,10 +376,10 @@ span.input-icon #nav-search-icon {
 	position: relative;
 }
 .og-fullimg {
-	width: 31%;
+	width: 50%;
 }
 .og-details {
-	width: 64%;
+	width: 47%;
 	padding: 0 40px 0 20px;
 }
 
@@ -455,3 +492,10 @@ span.input-icon #nav-search-icon {
 	}
 
 }
+/*<!-- <li itemscope itemtype ="http://schema.org/Movie">
+							<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
+							<br/>
+							<span itemprop="name">{{ values["shortfilms"][i]["name"] }}</span>
+							<span class="label tags" itemprop="genre">{{ values["shortfilms"][i]["category"] }}</span>
+
+					</li> -->*/

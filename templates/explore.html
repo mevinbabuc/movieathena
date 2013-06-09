@@ -5,16 +5,16 @@
 	<div class="row">
 		<div class="span12">
 
-			<ul id="og-grid" class="og-grid">
-				<h3 class="og-grid_heading"> My Works</h3>
+			<ul id="movie-grid">
+				
 				{% for i in values["shortfilms"] %}
 					<li itemscope itemtype ="http://schema.org/Movie">
+							<span class="movie-name" itemprop="name">{{ values["shortfilms"][i]["name"] }}</span>
 							<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
-							<br/>
-							<span itemprop="name">{{ values["shortfilms"][i]["name"] }}</span>
-							<span class="label tags" itemprop="genre">{{ values["shortfilms"][i]["category"] }}</span>
+						    <span class="label tags" itemprop="genre">{{ values["shortfilms"][i]["category"] }}</span>
 
 					</li>
+				
 				{% endfor %}
 			</ul>
 
@@ -25,10 +25,5 @@
 
 	{% block script %}
 
-	<script src="../static/js/grid.js"></script>
-	<script>
-		$(function() {
-			Grid.init();
-		});
-	</script>
+	
 	{% endblock %}
