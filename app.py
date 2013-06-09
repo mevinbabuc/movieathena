@@ -1,6 +1,6 @@
 from flask import Flask,render_template ,request,abort
 import MySQLdb as mdb
- 
+
 app = Flask(__name__)      
 
 ####
@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = 'aplha_pressure_cooker_omega'
 
 ####
-##### App structure
+##### App view 
 ####
 
 @app.route('/')
@@ -176,7 +176,22 @@ def login():
 
 @app.route('/signup')
 def sign_up():
+    name=""
+    email=""
+
+    if request.method=='POST':
+        if "name" in request.form:
+            name=request.form['name']
+        if "email" in request.form:
+            email = request.form['email']
+        if "work_field" in request.form:
+            work_field = request.form['work_field']
+
     return 'Signup succesfully proceed to login'
+
+@app.route('/add/shortfilm')
+def add_shortfilm():
+    return "shortfilm added"
 
 ####
 ##### Error handlers
