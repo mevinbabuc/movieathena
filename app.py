@@ -91,7 +91,12 @@ def show_movie(urlmoviename):
         if con:    
             con.close()
 
-    return 'Movie %s %s' % (str(shortfilm),str(artists))
+    values={}
+    values['shortfilm']=shortfilm
+    values['artists']=artists
+
+    # return 'Movie %s %s' % (str(shortfilm),str(artists))
+    return render_template('shortfilm.html', values=values)
 
 @app.route('/<moviename>/about')
 def show_movie_about(moviename):
