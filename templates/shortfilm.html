@@ -1,0 +1,17 @@
+<h1>About The Movie</h1>
+
+Shortfilm Name : {{ values["shortfilm"][1] }} <br/>
+Youtube link : {{ values["shortfilm"][3] }} <br/>
+Poster : {{ values["shortfilm"][4] }} <br/>
+Category : {{ values["shortfilm"][5] }} <br/>
+Rating : {{ values["shortfilm"][6] }} <br/>
+Date : {{ values["shortfilm"][7] }}
+
+
+
+<h2>The Crew</h2>
+{% for artist in values["artists"] %}
+	Name : {{ artist[0] }} <br/>
+	Facebook : {{ artist[1] }} <br/>
+	Role : {{ artist[2] }}<br/></br>
+{% endfor %}
