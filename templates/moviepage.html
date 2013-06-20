@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block whole_width %}
+<div class="container">
+
+	<div class="row">
+		<div class="span12">
+
+		
+				
+					<li itemscope itemtype ="http://schema.org/Movie">
+							<span class="movie-name" itemprop="name">{{ values["shortfilms"]["name"] }}</span>
+							<iframe src="{{ values["shortfilms"]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
+						    <span class="label tags" itemprop="genre">{{ values["shortfilms"]["category"] }}</span>
+
+					</li>
+				
+			
+	
+		</div>
+	</div>
+
+	{% endblock %}
+
+	{% block script %}
+
+	
+	{% endblock %}
