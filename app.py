@@ -30,7 +30,7 @@ def show_user_profile(username=None):
     values["body_prop"] =  "id=profile"
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
         cur.execute("select * from artists")
         artist = cur.fetchone()
@@ -73,7 +73,7 @@ def show_movie(urlmoviename):
     artists=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where name=%s",moviename)
@@ -109,7 +109,7 @@ def browse_movies():
     con=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms")
@@ -141,7 +141,7 @@ def browse_movies_category(category):
     con=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where category=%s",category)
