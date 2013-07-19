@@ -30,7 +30,7 @@ def show_user_profile(username=None):
     values["body_prop"] =  "id=profile"
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
         cur.execute("select * from artists")
         artist = cur.fetchone()
@@ -73,7 +73,7 @@ def show_movie(urlmoviename):
     artists=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where name=%s",moviename)
@@ -91,7 +91,12 @@ def show_movie(urlmoviename):
         if con:    
             con.close()
 
-    return 'Movie %s %s' % (str(shortfilm),str(artists))
+    values={}
+    values['shortfilm']=shortfilm
+    values['artists']=artists
+
+    # return 'Movie %s %s' % (str(shortfilm),str(artists))
+    return render_template('moviepage.html', values=values)
 
 @app.route('/<moviename>/about')
 def show_movie_about(moviename):
@@ -104,7 +109,7 @@ def browse_movies():
     con=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms")
@@ -136,7 +141,7 @@ def browse_movies_category(category):
     con=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where category=%s",category)
