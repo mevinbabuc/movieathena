@@ -2,26 +2,32 @@
 {% block whole_width %}
 <div class="container">
 
-	<div class="row">
-		<div class="span12">
+    <div class="row-fluid">
+        <div class="span12">
+            <h4>  {{ values["shortfilm"][1] }} </h4>
+            Youtube link : {{ values["shortfilm"][3] }} <br/>
+            Poster : {{ values["shortfilm"][4] }} <br/>
+            Category : {{ values["shortfilm"][5] }} <br/>
+            Rating : {{ values["shortfilm"][6] }} <br/>
+            Date : {{ values["shortfilm"][7] }}
 
-		
-				
-					<li itemscope itemtype ="http://schema.org/Movie">
-							<span class="movie-name" itemprop="name">{{ values["shortfilms"]["name"] }}</span>
-							<iframe src="{{ values["shortfilms"]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
-						    <span class="label tags" itemprop="genre">{{ values["shortfilms"]["category"] }}</span>
+	<iframe src="{{ values["shortfilm"][3] }}?rel=0" frameborder="0" allowfullscreen></iframe>
 
-					</li>
-				
-			
-	
-		</div>
-	</div>
+            <h2>The Crew</h2>
+            {% for artist in values["artists"] %}
+            Name : {{ artist[0] }} <br/>
+            Facebook : {{ artist[1] }} <br/>
+            Role : {{ artist[2] }}<br/></br>
+            {% endfor %}
 
-	{% endblock %}
 
-	{% block script %}
 
-	
-	{% endblock %}
+        </div>
+    </div>
+
+    {% endblock %}
+
+    {% block script %}
+
+
+    {% endblock %}

@@ -1,5 +1,4 @@
 
-<script type="text/javascript">
             var button;
             var userInfo;
             
@@ -190,4 +189,4 @@
                     document.getElementById('loader').style.display = 'none';
             }
             
-        </script>
+     

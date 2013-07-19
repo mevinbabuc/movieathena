@@ -96,7 +96,7 @@ def show_movie(urlmoviename):
     values['artists']=artists
 
     # return 'Movie %s %s' % (str(shortfilm),str(artists))
-    return render_template('shortfilm.html', values=values)
+    return render_template('moviepage.html', values=values)
 
 @app.route('/<moviename>/about')
 def show_movie_about(moviename):
