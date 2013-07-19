@@ -168,16 +168,20 @@ def browse_movies_category(category):
 
 @app.route('/login', methods=['POST'])
 def login():
-    email = "testing"
-    password = "testing"
+	login_manager = Login_Manager()
+	login_manager.init_app(app)
 
-    if request.method == 'POST':
-        if "email" in request.form:
-            email = request.form['email']
-        if "password" in request.form:
-            password = request.form['password']
 
-    return 'Login succesfull'
+    # email = "testing"
+    # password = "testing"
+
+    # if request.method == 'POST':
+    #     if "email" in request.form:
+    #         email = request.form['email']
+    #     if "password" in request.form:
+    #         password = request.form['password']
+
+    # return 'Login succesfull'
 
 @app.route('/signup')
 def sign_up():
