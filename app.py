@@ -16,7 +16,7 @@ app.secret_key = 'aplha_pressure_cooker_omega'
 @app.route('/')
 def landingPage():
     values = {}
-    values["body_prop"] =  "id=landingPage"
+    values["body_prop"] =  "id=landingPage-"
     return render_template('landingpage.html',values=values)
 
 @app.route('/user/<username>')

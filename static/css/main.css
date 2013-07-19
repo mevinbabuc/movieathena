@@ -33,6 +33,11 @@ body {
 	margin-top: 23px;
 }
 
+.movie-box{
+	height: 200px;
+	background: grey;
+}
+
 span.input-icon {
 	display: inline-block;
 	position: relative;
@@ -96,13 +101,16 @@ span.input-icon #nav-search-icon {
 	padding: 10px 0 30px 0;
 	text-shadow: 1px 1px black;
 	text-align: center;
-	margin-top: 80px;
-	min-height: 450px;
+	margin-top: 30px;
+	margin-bottom:50px;
 	position: relative;
 }
 
 #landingPage div.welcome_text h2, #landingPage div.welcome_text h3 {
-	color: white;
+	color: black;
+	font-family: "Source Sans Pro";
+	font-weight: 200;
+	text-shadow: none;
 	text-align: center;
 	margin-top: 40px;
 }
@@ -115,9 +123,6 @@ span.input-icon #nav-search-icon {
 	font-size: 1.7em;
 	font-weight: 100;
 	letter-spacing: -1px;
-}
-#landingPage .container-fluid {
-	background-color: white;
 }
 .btn {
 	font-family: "Source Sans Pro";
