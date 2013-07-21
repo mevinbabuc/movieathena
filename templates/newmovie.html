@@ -1,67 +1,64 @@
 {% extends "layout.html" %}
 
-
 {% block left_part %}
 <form  class="form-horizontal" action="upload" method="POST">
-<div class="control-group">
-<label class="control-label">Movie Name</label>
-<div class="controls">
-<input type="text" id="moviename" name="name" />
-</div>
-</div>
-<div class="control-group">
-<label class="control-label">You Tube url</label>
-<div class="controls">
-<input type="text" id="movieurl" name="youtubeurl" />
-</div>
-</div>
-<div class="control-group">
-<label class="control-label">You Tube url</label>
-<div class="controls">
-<input type="text" id="movietitle" name="title" />
-</div>
-</div>
-<div class="control-group">
-<label class="control-label">You Tube url</label>
-<div class="controls">
-<input type="text" id="movietag" name="tags" />
-</div>
-</div>
-<!-- dynamic field to add tags -->
-<!-- in the v1.0 the user can just select one category out of a drop-down-list -->
-<div class="control-group">
-<label class="control-label">You Tube url</label>
-<div class="controls">
-<input type="text" id="moviedesc" name="description" />
-</div>
-</div>
-<!-- uploader's role -->
+	<div class="control-group">
+		<label class="control-label">Movie Name</label>
+		<div class="controls">
+			<input type="text" id="moviename" name="name" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">You Tube url</label>
+		<div class="controls">
+			<input type="text" id="movieurl" name="youtubeurl" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">You Tube url</label>
+		<div class="controls">
+			<input type="text" id="movietitle" name="title" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">You Tube url</label>
+		<div class="controls">
+			<input type="text" id="movietag" name="tags" />
+		</div>
+	</div>
+	<!-- dynamic field to add tags -->
+	<!-- in the v1.0 the user can just select one category out of a drop-down-list -->
+	<div class="control-group">
+		<label class="control-label">You Tube url</label>
+		<div class="controls">
+			<input type="text" id="moviedesc" name="description" />
+		</div>
+	</div>
+	<!-- uploader's role -->
 
-<div class="control-group">
-<label class="control-label">You Tube url</label>
-<div class="controls">
-<input type="text" id="movierole" name="role" />
-</div>
-</div>
-<!-- dynamic field to add people and role -->
-<div class="control-group">
-<label class="control-label">You Tube url</label>
-<div class="controls">
-<input type="text" id="crewname" name="crew_name_1" />
-<input type="text" id="crewname" name="crew_name_1" />
-</div>
-</div>
-<!--type email address and name, if the person is not there on movieathena. 
-    we'll send him a request through fb and mail -->
+	<div class="control-group">
+		<label class="control-label">You Tube url</label>
+		<div class="controls">
+			<input type="text" id="movierole" name="role" />
+		</div>
+	</div>
+	<!-- dynamic field to add people and role -->
+	<div class="control-group">
+		<label class="control-label">You Tube url</label>
+		<div class="controls">
+			<input type="text" id="crewname" name="crew_name_1" />
+			<input type="text" id="crewname" name="crew_name_1" />
+		</div>
+	</div>
+	<!--type email address and name, if the person is not there on movieathena.
+	we'll send him a request through fb and mail -->
 </form>
 
-
 <!--
-    This is the exact scenario where we need couchdb/Mongodb ,
-    to deal with dynamic forms.
-    Or just make a table for each movie :-/ and store everything about the movie there
+This is the exact scenario where we need couchdb/Mongodb ,
+to deal with dynamic forms.
+Or just make a table for each movie :-/ and store everything about the movie there
 -->
-
 
 {% endblock %}
 

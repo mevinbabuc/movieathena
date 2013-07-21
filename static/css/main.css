@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300');
+/*@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300');*/
 
 body {
 
@@ -7,8 +7,8 @@ body {
 
 	min-height: auto;
 }
-.navbar{
-	margin-top:50px;
+.navbar {
+	margin-top: 50px;
 }
 .navbar .navbar-inner {
 	background: transparent;
@@ -16,13 +16,13 @@ body {
 	border: none;
 	box-shadow: none;
 }
-.navbar .nav > li > a{
+.navbar .nav > li > a {
 	color: black;
 	font-family: "Source Sans Pro";
 	font-weight: 200;
 	padding: 10px 15px 10px;
 	font-size: 1.4em;
-		}
+}
 
 .navbar-form {
 	margin-top: 23px;
@@ -33,7 +33,7 @@ body {
 	margin-top: 23px;
 }
 
-.movie-box{
+.movie-box {
 	height: 200px;
 	background: grey;
 }
@@ -83,17 +83,16 @@ span.input-icon #nav-search-icon {
 #landingPage {
 	/*overflow: hidden;*/
 	/*color: white;
-	background: rgb(240,249,255); /* Old browsers */
+	 background: rgb(240,249,255); /* Old browsers */
 	/*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZjMwMTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2YwNDA0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,48,25,1)), color-stop(100%,rgba(207,4,4,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );*/*/
-	
-	
+	 background: -moz-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%);
+	 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,48,25,1)), color-stop(100%,rgba(207,4,4,1)));
+	 background: -webkit-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+	 background: -o-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+	 background: -ms-radial-gradient(center, ellipse cover, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+	 background: radial-gradient(ellipse at center, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );*/*/
+
 }
 
 #landingPage div.welcome_text {
@@ -102,7 +101,7 @@ span.input-icon #nav-search-icon {
 	text-shadow: 1px 1px black;
 	text-align: center;
 	margin-top: 30px;
-	margin-bottom:50px;
+	margin-bottom: 50px;
 	position: relative;
 }
 
@@ -123,6 +122,12 @@ span.input-icon #nav-search-icon {
 	font-size: 1.7em;
 	font-weight: 100;
 	letter-spacing: -1px;
+}
+#landingPage div input[type=text] {
+	box-shadow: none;
+	border: none;
+	border-radius:none;
+	border-bottom: 1px dashed grey;
 }
 .btn {
 	font-family: "Source Sans Pro";
