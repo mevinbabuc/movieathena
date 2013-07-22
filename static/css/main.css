@@ -8,7 +8,7 @@ body {
 	min-height: auto;
 }
 .navbar {
-	
+
 }
 .navbar .navbar-inner {
 	background: transparent;
@@ -16,9 +16,9 @@ body {
 	border: none;
 	box-shadow: none;
 }
-.navbar .nav > li > a,.navbar .brand{
+.navbar .nav > li > a, .navbar .brand {
 	color: black;
-	font-family: "Source Sans Pro",Helvetica;
+	font-family: "Source Sans Pro", Helvetica;
 	font-weight: 200;
 	padding: 10px 15px 10px;
 	font-size: 1.4em;
@@ -38,6 +38,14 @@ body {
 	background: grey;
 }
 
+.heading {
+	color: black;
+	font-family: "Source Sans Pro", Helvetica;
+	font-weight: 300;
+	border-bottom: 1px solid #eee;
+	font-size: 2em;
+	
+}
 span.input-icon {
 	display: inline-block;
 	position: relative;
@@ -126,11 +134,11 @@ span.input-icon #nav-search-icon {
 input[type=text] {
 	box-shadow: none;
 	border: none;
-	border-radius:none;
+	border-radius: none;
 	border-bottom: 1px dashed grey;
 }
-input[type=text]:hover,input[type=text]:focus{
-	
+input[type=text]:hover, input[type=text]:focus {
+
 	box-shadow: none;
 }
 .btn {

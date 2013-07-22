@@ -2,32 +2,42 @@
 {% block whole_width %}
 <div class="container">
 
-    <div class="row-fluid">
-        <div class="span12">
-            <h4>  {{ values["shortfilm"][1] }} </h4>
-            Youtube link : {{ values["shortfilm"][3] }} <br/>
-            Poster : {{ values["shortfilm"][4] }} <br/>
-            Category : {{ values["shortfilm"][5] }} <br/>
-            Rating : {{ values["shortfilm"][6] }} <br/>
-            Date : {{ values["shortfilm"][7] }}
+	<div class="row-fluid">
+		<div class="span12">
+			<h3 class="heading"> {{ values["shortfilm"][1] }} </h3>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span8">
 
-	<iframe src="{{ values["shortfilm"][3] }}?rel=0" frameborder="0" allowfullscreen></iframe>
+			<iframe src="{{ values["shortfilm"][3] }}?rel=0" frameborder="0" width="100%" height="500px" allowfullscreen></iframe>
+		</div>
+		<div class="span4">
+			Category : {{ values["shortfilm"][5] }}
+			<br>
+			Rating : {{ values["shortfilm"][6] }}
+		</div>
+	</div>
+	<div class="row-fluid">
+		Poster : {{ values["shortfilm"][4] }}
+		Date : {{ values["shortfilm"][7] }}
 
-            <h2>The Crew</h2>
-            {% for artist in values["artists"] %}
-            Name : {{ artist[0] }} <br/>
-            Facebook : {{ artist[1] }} <br/>
-            Role : {{ artist[2] }}<br/></br>
-            {% endfor %}
+		<div class="row-fluid">
+			<h2>The Crew</h2>
+			{% for artist in values["artists"] %}
+			Name : {{ artist[0] }}
 
+			Facebook : {{ artist[1] }}
 
+			Role : {{ artist[2] }}
 
-        </div>
-    </div>
+			{% endfor %}
 
-    {% endblock %}
+		</div>
+	</div>
 
-    {% block script %}
+	{% endblock %}
 
+	{% block script %}
 
-    {% endblock %}
+	{% endblock %}

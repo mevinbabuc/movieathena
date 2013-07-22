@@ -100,7 +100,7 @@ def show_movie(urlmoviename):
     values={}
     values['shortfilm']=shortfilm
     values['artists']=artists
-
+    values["body_prop"] =  "id=moviePage"
     # return 'Movie %s %s' % (str(shortfilm),str(artists))
     return render_template('moviepage.html', values=values)
 
