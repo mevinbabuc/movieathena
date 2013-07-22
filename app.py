@@ -24,7 +24,10 @@ def showcase():
     values = {}
     values["body_prop"] =  "id=makeMovie"
     return render_template('newmovie.html',values=values)
-
+@app.route('/testing')
+def showcase():
+    values = {}
+    return render_template('facebook.html',values=values)
 @app.route('/user/<username>')
 def show_user_profile(username=None):
     # show the user profile for that user
