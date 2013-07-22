@@ -19,8 +19,8 @@ def landingPage():
     values["body_prop"] =  "id=landingPage"
     return render_template('landingpage.html',values=values)
 
-@app.route('/makemovie')
-def makeMovie():
+@app.route('/showcase')
+def showcase():
     values = {}
     values["body_prop"] =  "id=makeMovie"
     return render_template('newmovie.html',values=values)

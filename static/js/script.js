@@ -3,20 +3,14 @@
  */
 
 // Login/signup function
-var login_signup = function() {
-	var div_login = $("#login");
-	var div_signup = $("#signup");
-	var button_login = $("#button_login");
-	button_login.toggle(function() {
-		div_signup.hide();
-		button_login.text("Sign up");
-		div_login.fadeIn();
-	}, function() {
-		div_login.hide();
-		button_login.text("Login");
-		div_signup.fadeIn();
-
-	});
-};
-login_signup();
-
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/en_UK/all.js', function(){
+    FB.init({
+      appId: '173786519447935',
+      channelUrl: 'http://127.0.0.1:8123/',
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});

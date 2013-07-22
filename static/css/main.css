@@ -1,4 +1,4 @@
-/*@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300');*/
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300');
 
 body {
 
@@ -8,7 +8,7 @@ body {
 	min-height: auto;
 }
 .navbar {
-	margin-top: 50px;
+	
 }
 .navbar .navbar-inner {
 	background: transparent;
@@ -16,9 +16,9 @@ body {
 	border: none;
 	box-shadow: none;
 }
-.navbar .nav > li > a {
+.navbar .nav > li > a,.navbar .brand{
 	color: black;
-	font-family: "Source Sans Pro";
+	font-family: "Source Sans Pro",Helvetica;
 	font-weight: 200;
 	padding: 10px 15px 10px;
 	font-size: 1.4em;
@@ -123,11 +123,15 @@ span.input-icon #nav-search-icon {
 	font-weight: 100;
 	letter-spacing: -1px;
 }
-#landingPage div input[type=text] {
+input[type=text] {
 	box-shadow: none;
 	border: none;
 	border-radius:none;
 	border-bottom: 1px dashed grey;
+}
+input[type=text]:hover,input[type=text]:focus{
+	
+	box-shadow: none;
 }
 .btn {
 	font-family: "Source Sans Pro";
