@@ -8,40 +8,32 @@
 		</div>
 
 		<div class="span8">
-			<div itemscope itemtype="http://data-vocabulary.org/Person" class="offset1 span5 profile_leftpart">
-				<h4 itemprop="name" class="heading">{{ values["name"] }}</h4>
-				<h3 itemprop="age">23 years old</h3>
-				<h3> Field of work</h3>
-				<span class="label tags" itemprop="role">{{ values["work_field"] }}</span>
-				<span class="label tags" itemprop="url">{{ values["fb_link"] }}</span>
-				<span class="label tags" itemprop="url">{{ values["twitter_link"] }}</span>
-				<span class="label tags" itemprop="url">{{ values["email"] }}</span>
+			<div itemscope itemtype="http://data-vocabulary.org/Person">
+				<h2 itemprop="name" class="heading">{{ values["name"] }} <small class="text-right"> ( {{ values["work_field"] }} )</small></h2>
+				<div class="row-fluid">
+					<div class="span6">
+
+					</div>
+					<div class="span6">
+						<div class="row-fluid text-right">
+							<div class="span12 profile_social_links">
+								<a title="Facebook Profile" href="{{ values["fb_link"] }}" itemprop="url"><i class="icon-facebook"></i></a>
+								<a title="Twitter Profile" href="{{ values["twitter_link"] }}" itemprop="url"><i class="icon-twitter"></i></a>
+								<a title="Youtube Channel" href="#" itemprop="url"><i class="icon-youtube"></i></a>
+								<a title="{{ values["email"] }}" href="mailto:{{ values["email"] }}" itemprop="email"><i>@</i></a>
+
+							</div>
+							<div class="span12">
+								<h2>Badges</h2>
+								<span class="label label-warning">Created {{ values["count"]+1 }} ShortMovies</span>
+								<span class="label label-warning">10k Hit</span>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 
-			<!--@TODO shown only when user logged in -->
-			<div class="uesr_options">
-				<ul class="nav nav-list">
-					<li class="nav-header">
-						Options
-					</li>
-					<li >
-						<a  href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
-					</li>
-					<li>
-						<a href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
-					</li>
-					<li>
-						<a href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
-					</li>
-				</ul>
-				<!-- <a class="btn btn-success" href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
-				<br>
-				<a class="btn btn-success" href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
-				<br>
-				<a class="btn btn-warning" href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
-				<br> -->
-			</div>
 		</div>
 	</div>
 	<div class="offset1 span4 profile_rightpart">

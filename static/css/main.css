@@ -42,7 +42,7 @@ body {
 	color: black;
 	font-family: "Source Sans Pro", Helvetica;
 	font-weight: 300;
-	border-bottom: 2px solid rgb(255, 224, 0);;
+	border-bottom: 2px solid #f89406;
 	font-size: 2em;
 	text-transform: capitalize;
 }
@@ -50,6 +50,7 @@ h5.heading{
 	font-size: 1.4em;
 	border:none;
 	margin-top: 30px;
+	
 }
 .heading .icon-stack {
 	float: right;
@@ -225,15 +226,19 @@ input[type=text]:hover, input[type=text]:focus {
 
 /*///////////////////////////////////////////////////Profile////*/
 
-#profile .profile_pic{
-	width: 100px
+#profile .profile_pic img{
+	width: 100%;
+	border:3px white solid;
+	box-shadow: 0 0 3px #999;
 }
-#profile .uesr_options {
-	margin-top: 100px;
+#profile .profile_social_links a{
+	font-size: 1.4em;
+	color: #f89406;
+	text-decoration: none;
+	padding: 3px 10px;
+	
 }
-#profile .uesr_options a {
 
-}
 /*500*/
 .blue {
 	color: rgb(71, 143, 202) !important;
