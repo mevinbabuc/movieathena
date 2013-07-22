@@ -2,24 +2,22 @@
 {% block whole_width %}
 
 <div class="container profile_page">
-	<div class="row">
-
-		<div class="profile_pic">
+	<div class="row-fluid">
+		<div class="span4 profile_pic">
 			<img src='../static/assets_user/achu.jpg'>
 		</div>
-	</div>
-	<div class="row">
-		<div itemscope itemtype="http://data-vocabulary.org/Person" class="offset1 span5 profile_leftpart">
-			<h4 itemprop="name">{{ values["name"] }}</h4>
-			<h3 itemprop="age">23 years old</h3>
-			<h3> Field of work</h3>
-			<span class="label tags" itemprop="role">{{ values["work_field"] }}</span>
-			<span class="label tags" itemprop="url">{{ values["fb_link"] }}</span>
-			<span class="label tags" itemprop="url">{{ values["twitter_link"] }}</span>
-			<span class="label tags" itemprop="url">{{ values["email"] }}</span>
 
-		</div>
+		<div class="span8">
+			<div itemscope itemtype="http://data-vocabulary.org/Person" class="offset1 span5 profile_leftpart">
+				<h4 itemprop="name" class="heading">{{ values["name"] }}</h4>
+				<h3 itemprop="age">23 years old</h3>
+				<h3> Field of work</h3>
+				<span class="label tags" itemprop="role">{{ values["work_field"] }}</span>
+				<span class="label tags" itemprop="url">{{ values["fb_link"] }}</span>
+				<span class="label tags" itemprop="url">{{ values["twitter_link"] }}</span>
+				<span class="label tags" itemprop="url">{{ values["email"] }}</span>
 
+			</div>
 
 			<!--@TODO shown only when user logged in -->
 			<div class="uesr_options">
@@ -31,10 +29,10 @@
 						<a  href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
 					</li>
 					<li>
-				<a href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
+						<a href="{{ url_for('browse_movies') }}">Start your ShortMovie</a>
 					</li>
 					<li>
-				<a href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
+						<a href="{{ url_for('browse_movies') }}">Explore the world of ShortMovie</a>
 					</li>
 				</ul>
 				<!-- <a class="btn btn-success" href="{{ url_for('browse_movies') }}">Upload your ShortMovie</a>
@@ -45,30 +43,31 @@
 				<br> -->
 			</div>
 		</div>
-		<div class="offset1 span4 profile_rightpart">
-			<h3> Achivements</h3>
-			<span class="label tags">Created {{ values["count"]+1 }} ShortMovies</span>
-			<span class="label tags">10k Hit</span>
-
-		</div>
+	</div>
+	<div class="offset1 span4 profile_rightpart">
+		<h3> Achivements</h3>
+		<span class="label tags">Created {{ values["count"]+1 }} ShortMovies</span>
+		<span class="label tags">10k Hit</span>
 
 	</div>
-	<div class="row">
-		<div class="span12">
 
-			<ul id="og-grid" class="og-grid">
-				<h3> My Works</h3>
-				{% for i in values["shortfilms"] %}
-					<li>
-							<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
-							<br/>
-							<span>{{ values["shortfilms"][i]["name"] }}</span>
-					</li>
-				{% endfor %}
-			</ul>
+</div>
+<div class="row">
+	<div class="span12">
 
-		</div>
+		<ul id="og-grid" class="og-grid">
+			<h3> My Works</h3>
+			{% for i in values["shortfilms"] %}
+			<li>
+				<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
+				<br/>
+				<span>{{ values["shortfilms"][i]["name"] }}</span>
+			</li>
+			{% endfor %}
+		</ul>
+
 	</div>
+</div>
 </div>
 {% endblock %}
 
