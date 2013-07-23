@@ -17,60 +17,33 @@
 					<div class="span6">
 						<div class="row-fluid text-right">
 							<div class="span12 profile_social_links">
-								<a title="Facebook Profile" href="{{ values["fb_link"] }}" itemprop="url"><i class="icon-facebook"></i></a>
+								<a title="Facebook Profile" href="http://www.facebook.com/{{ values["fb_link"] }}" itemprop="url"><i class="icon-facebook"></i></a>
 								<a title="Twitter Profile" href="{{ values["twitter_link"] }}" itemprop="url"><i class="icon-twitter"></i></a>
 								<a title="Youtube Channel" href="#" itemprop="url"><i class="icon-youtube"></i></a>
 								<a title="{{ values["email"] }}" href="mailto:{{ values["email"] }}" itemprop="email"><i>@</i></a>
 
 							</div>
 							<div class="span12">
-								<h2>Badges</h2>
+								<h5 class="heading">Badges</h5>
 								<span class="label label-warning">Created {{ values["count"]+1 }} ShortMovies</span>
 								<span class="label label-warning">10k Hit</span>
 							</div>
 						</div>
 					</div>
 				</div>
-
+				<div class="row-fluid">
+					<div class="span12">
+						<h5 class="heading"> My Works</h5>
+						{% for i in values["shortfilms"] %}
+						<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
+						<span>{{ values["shortfilms"][i]["name"] }}</span>
+						{% endfor %}
+					</div>
+				</div>
 			</div>
-
 		</div>
 	</div>
-	<div class="offset1 span4 profile_rightpart">
-		<h3> Achivements</h3>
-		<span class="label tags">Created {{ values["count"]+1 }} ShortMovies</span>
-		<span class="label tags">10k Hit</span>
-
-	</div>
-
 </div>
-<div class="row">
-	<div class="span12">
 
-		<ul id="og-grid" class="og-grid">
-			<h3> My Works</h3>
-			{% for i in values["shortfilms"] %}
-			<li>
-				<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
-				<br/>
-				<span>{{ values["shortfilms"][i]["name"] }}</span>
-			</li>
-			{% endfor %}
-		</ul>
-
-	</div>
-</div>
-</div>
 {% endblock %}
 
-{% block script %}
-
-<script src="../static/js/grid.js"></script>
-<script>
-	$(function() {
-		Grid.init();
-	});
-
-</script>
-
-{% endblock %}
