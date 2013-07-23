@@ -2,7 +2,7 @@
             var userInfo;
             
             window.fbAsyncInit = function() {
-                FB.init({ appId: '173786519447935', //change the appId to your appId
+                FB.init({ appId: '472323286188757', //change the appId to your appId
                     status: true, 
                     cookie: true,
                     xfbml: true,
@@ -201,7 +201,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=173786519447935";
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=472323286188757";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
