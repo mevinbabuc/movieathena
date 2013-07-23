@@ -1,64 +1,92 @@
 {% extends "layout.html" %}
 
-{% block right_part %}
-<form class="form-horizontal">
-<div class="control-group">
-	<label class="control-label" for="nm_moviename">Movie Name</label>
-	<div class="controls">
-		<input type="text" id="nm_moviename" name="name" />
-	</div>
-</div>
-<div class="control-group">
-	<label class="control-label">You Tube url</label>
-	<div class="controls">
-		<input type="text" id="movieurl" name="youtubeurl" />
-	</div>
-</div>
-<div class="control-group">
-	<label class="control-label">Movie Title</label>
-	<div class="controls">
-		<input type="text" id="movietitle" name="title" />
-	</div>
-</div>
-<div class="control-group">
-	<label class="control-label">Tags</label>
-	<div class="controls">
-		<input type="text" id="movietag" name="tags" />
-	</div>
-</div>
-<!-- dynamic field to add tags -->
-<!-- in the v1.0 the user can just select one category out of a drop-down-list -->
-<div class="control-group">
-	<label class="control-label">Description</label>
-	<div class="controls">
-		<textarea id="moviedesc" name="description"></textarea>
-	</div>
-</div>
-<!-- uploader's role -->
+{% block whole_width %}
+<div class="row-fluid">
+	<div class="span8">
+		<form class="form-horizontal">
+			<div class="control-group">
+				<label class="control-label" for="nm_moviename">Movie Name</label>
+				<div class="controls">
+					<input class="input-block-level" type="text" id="nm_moviename" name="name" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="nm_url">You Tube</label>
+				<div class="controls">
+					<input class="input-block-level" type="text" id="nm_url" name="youtubeurl" />
+					<div class="movie-box"></div>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="nm_poster">Posters</label>
+				<div class="controls">
+					<input type="file" id="nm_poster" name="youtubeurl" />
+					<div class="movie-box"></div>
+				</div>
+			</div>
 
-<div class="control-group">
-	<label class="control-label">Roles</label>
-	<div class="controls">
-		<input type="text" id="movierole" name="role" />
-	</div>
-</div>
-<!-- dynamic field to add people and role -->
-<div class="control-group">
-	<label class="control-label">Crew</label>
-	<div class="controls">
-		<input type="text" id="crewname" name="crew_name_1" />
-		<input type="text" id="crewname" name="crew_name_1" />
-	</div>
-</div>
-<div class="control-group">
-    <div class="controls">
-         <button type="submit" class="btn">Showcase my Movie</button>
-    </div>
-  </div>
-<!--type email address and name, if the person is not there on movieathena.
-we'll send him a request through fb and mail -->
-</form>
+			<div class="control-group">
+				<label class="control-label">Tags</label>
+				<div class="controls">
+					<select>
 
+						<option>Comedy</option>
+						<option>Drama</option>
+						<option></option>
+					</select>
+				</div>
+			</div>
+			<!-- dynamic field to add tags -->
+			<!-- in the v1.0 the user can just select one category out of a drop-down-list -->
+			<div class="control-group">
+				<label class="control-label">Description</label>
+				<div class="controls">
+					<textarea rows="10" class="input-block-level" id="moviedesc" name="description"></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-warning">
+						Showcase my Movie
+					</button>
+				</div>
+			</div>
+			<!--type email address and name, if the person is not there on movieathena.
+			we'll send him a request through fb and mail -->
+		</form>
+	</div>
+	<div class="span4">
+		<form class="control-group">
+			<label for="nm_crew" class="control-label">The Crew</label>
+			<select id="nm_crew">
+				<option>Actors</option>
+				<option>Producer</option>
+				<option>Director</option>
+			</select>
+			<input type="text" placeholder="Name" name="name" />
+			<input type="text" placeholder="eg: acted as Alice" />
+			<input type="text" placeholder="Facebook link" />
+			<br/>
+			<input class="btn btn-warning" type="submit" value="Add" />
+			<br>
+			<div id="the crew">
+				<div class="label label-warning">
+					Anenth (Actor)
+				</div>
+				<br>
+				<div class="label label-warning">
+					Anenth (Actor)
+				</div>
+				<br>
+				<div class="label label-warning">
+					Anenth (Actor)
+				</div>
+				<br>
+			</div>
+
+		</form>
+	</div>
+</div>
 <!--
 This is the exact scenario where we need couchdb/Mongodb ,
 to deal with dynamic forms.

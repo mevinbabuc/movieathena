@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block right_part %}
-<!-- 
- <div id="signup">
+<!--
+<div id="signup">
 <h4>Sign up</h4>
 <form autocomplete="off" action="{{ url_for('login') }}" method="post">
 <input class="input-block-level" type="text" name="username" placeholder="Pick a username"/>
@@ -22,11 +22,10 @@ By clicking on "Sign up" below, you agree to the <a href="#">Terms of Service</a
 </form>
 </div>
 </div>
- -->
+-->
 {% endblock %}
 
 {% block whole_width %}
-
 
 <div class="container">
 	<div class="row-fluid">
@@ -34,19 +33,17 @@ By clicking on "Sign up" below, you agree to the <a href="#">Terms of Service</a
 			<h2>Welcome to in30mins</h2>
 			<h3>Showcase my movie</h3>
 
+			<div id="fb-root"></div>
 
+			<!--
+			Below we include the Login Button social plugin. This button uses the JavaScript SDK to
+			present a graphical Login button that triggers the FB.login() function when clicked.
 
-<div id="fb-root"></div>
+			Learn more about options for the login button plugin:
+			/docs/reference/plugins/login/ -->
 
-<!--
-  Below we include the Login Button social plugin. This button uses the JavaScript SDK to
-  present a graphical Login button that triggers the FB.login() function when clicked.
+			<fb:login-button show-faces="false" width="400" max-rows="1"></fb:login-button>
 
-  Learn more about options for the login button plugin:
-  /docs/reference/plugins/login/ -->
-
-<fb:login-button show-faces="false" width="400" max-rows="1"></fb:login-button>
-            
 			<form action="makemovie">
 				<input type="text" class="span6" name="youtube_url" required placeholder="Paste your Youtube url" />
 				<br>
@@ -54,7 +51,6 @@ By clicking on "Sign up" below, you agree to the <a href="#">Terms of Service</a
 			</form>
 
 		</div>
-		</div> 
 
 		<div class="span12">
 			<div class="span3 movie-box"></div>
@@ -62,7 +58,8 @@ By clicking on "Sign up" below, you agree to the <a href="#">Terms of Service</a
 			<div class="span3 movie-box"></div>
 			<div class="span3 movie-box"></div>
 		</div>
-<div id="fb-root"></div>
 	</div>
+	
 </div>
+
 {% endblock %}

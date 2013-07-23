@@ -32,7 +32,7 @@
 						{% for artist in values["artists"] %}
 						<div class="row-fluid">
 							<div class="span2">
-								<img src="https://graph.facebook.com/{{ artist[1] }}/picture?type=thumbnail" >
+								<img src="https://graph.facebook.com/{{ artist[1] }}/picture?type=small" >
 							</div>
 							<div class="span10">
 								<h5 class="heading"><a href="./user/{{ artist[0] }}" >{{ artist[0] }}</a> ({{ artist[2] }})</h5>
@@ -51,6 +51,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 
 		<div class="span4">
