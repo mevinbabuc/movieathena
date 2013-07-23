@@ -149,15 +149,21 @@ span.input-icon #nav-search-icon {
 	font-weight: 100;
 	letter-spacing: -1px;
 }
-input[type=text] {
+input[type=text],textarea {
 	box-shadow: none;
 	border: none;
 	border-radius: none;
 	border-bottom: 1px dashed grey;
 }
-input[type=text]:hover, input[type=text]:focus {
-
+input[type=text]:hover, input[type=text]:focus,input:required:hover {
 	box-shadow: none;
+}
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus{
+	box-shadow: none;
+	border-none;
+}
+textarea{
+	border: 1px dashed grey;
 }
 .btn {
 	font-family: "Source Sans Pro";
@@ -236,7 +242,10 @@ input[type=text]:hover, input[type=text]:focus {
 	color: #f89406;
 	text-decoration: none;
 	padding: 3px 10px;
-	
+}
+#profile .profile_desc{
+	text-indent: 50px;
+	text-align: justify;
 }
 
 /*500*/
