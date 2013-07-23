@@ -22,10 +22,10 @@ def landingPage():
 @app.route('/showcase')
 def showcase():
     values = {}
-    values["body_prop"] =  "id=makeMovie"
+    values["body_prop"] =  "id=showcase"
     return render_template('newmovie.html',values=values)
 @app.route('/testing')
-def showcase():
+def testings():
     values = {}
     return render_template('facebook.html',values=values)
 @app.route('/user/<username>')
