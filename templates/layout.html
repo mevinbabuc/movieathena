@@ -37,14 +37,27 @@
 	{{values["body_prop"]}}
 	{% endif %}
 	>
+	 <div id="fb-root"></div>
+
 		<div class="container" id="navbar">
 			<div class="navbar ">
 				<div class="navbar-inner">
 					<a class="brand" href="./">in30mins</a>
 					<ul class="nav pull-right">
 						<li>
-							<span id="username">Welcome Guest</span>
+							<!-- <span id="username">Welcome Guest</span>
 							<a onClick=logout(); href="javascript:void(0);"> Logout</a> 
+							 -->
+		<button id="fb-auth" class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login</button>
+		<div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1"></div>
+        <div id="loader" style="display:none">
+        </div>
+        <br />
+        <div id="user-info"></div>
+        <br />
+        <div id="debug"></div>
+        
+
 						</li>
 					</ul>
 				</div>

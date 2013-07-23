@@ -25,7 +25,11 @@ def showcase():
     values["body_prop"] =  "id=showcase"
     return render_template('newmovie.html',values=values)
 @app.route('/testing')
+<<<<<<< Updated upstream
 def testings():
+=======
+def  testing():
+>>>>>>> Stashed changes
     values = {}
     return render_template('facebook.html',values=values)
 @app.route('/user/<username>')
