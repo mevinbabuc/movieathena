@@ -24,6 +24,10 @@ def showcase():
     values = {}
     values["body_prop"] =  "id=showcase"
     return render_template('newmovie.html',values=values)
+@app.route('/addCrew')
+def addCrew():
+    values = {}
+    return render_template('newmovie_crew.html',values=values)
 @app.route('/testing')
 def  testing():
     values = {}
@@ -182,12 +186,8 @@ def browse_movies_category(category):
 
 @app.route('/login', methods=['POST'])
 def login():
-	login_manager = Login_Manager()
-	login_manager.init_app(app)
-
-
-    # email = "testing"
-    # password = "testing"
+    email = "testing"
+    password = "testing"
 
     # if request.method == 'POST':
     #     if "email" in request.form:
@@ -195,7 +195,7 @@ def login():
     #     if "password" in request.form:
     #         password = request.form['password']
 
-    # return 'Login succesfull'
+    return 'Login succesfull'
 
 @app.route('/signup')
 def sign_up():

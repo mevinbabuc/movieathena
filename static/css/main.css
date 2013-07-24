@@ -120,7 +120,9 @@ span.input-icon #nav-search-icon {
 	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );*/*/
 
 }
-
+label em{
+	color: red;
+}
 #landingPage div.welcome_text {
 
 	padding: 10px 0 30px 0;

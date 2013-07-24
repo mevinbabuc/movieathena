@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block whole_width %}
+<div class="row-fluid">
+	<div class="span8 offset1">
+		<div class="alert alert-info">
+			<button type="button" class="close" data-dismiss="alert">
+				&times;
+			</button>
+			<h4>Please Login to continue!</h4>
+			You have not logged in . Please Login using facebook !
+		</div>
+
+		<form  id="add_crew" class="form-horizontal">
+			<h5 class="heading"> Add all the Crew</h5>
+			<div class="control-group" >
+				<label for="nm_crew" class="control-label">Type</label>
+				<div class="controls">
+					<select id="nm_crew">
+						<option>Actors</option>
+						<option>Producer</option>
+						<option>Director</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group" >
+				<label for="nm_crew_name" class="control-label">Name of the Person<em>*</em></label>
+				<div class="controls">
+					<input type="text" required class="span10" id="nm_crew_name" placeholder="eg: Rohit Vincent" name="name" />
+				</div>
+			</div>
+			<div class="control-group" >
+				<label for="nm_crew_acted" class="control-label">Featured as</label>
+				<div class="controls">
+					<input type="text" id="nm_crew_acted" placeholder="eg: acted as Bob" />
+				</div>
+			</div>
+			<div class="control-group" >
+				<label for="nm_crew_fb" class="control-label">Facebook link<em>*</em></label>
+				<div class="controls">
+					<input type="text" required id="nm_crew_fb" placeholder="eg: www.facebook.com/rohitvicent" />
+				</div>
+			</div>
+			<div class="control-group" >
+				<div class="controls">
+					<input class="btn btn-warning" type="submit" value="Add" />
+				</div>
+			</div>
+
+			<div id="the crew">
+				<div class="row-fluid">
+					<button type="button" class="close" data-dismiss="alert">
+						&times;
+					</button>
+					<div class="span2">
+						<img src="https://graph.facebook.com/mevinbabuc/picture?type=large" >
+					</div>
+					<div class="span10">
+						<h5 class="heading">Rohit Vincent (actor)</h5>
+						<small>acted as Bob</small>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript"></script>
+{% endblock %}
