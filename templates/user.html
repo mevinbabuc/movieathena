@@ -4,7 +4,7 @@
 <div class="container profile_page">
 	<div class="row-fluid">
 		<div class="span4 profile_pic">
-			<img src='../static/assets_user/achu.jpg'>
+			<img src="https://graph.facebook.com/{{ values["fb_link"] }} /picture?type=large" >
 		</div>
 
 		<div class="span8">
@@ -12,7 +12,9 @@
 				<h2 itemprop="name" class="heading">{{ values["name"] }} <small class="text-right"> ( {{ values["work_field"] }} )</small></h2>
 				<div class="row-fluid">
 					<div class="span8 profile_desc">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.
+						</p>
 					</div>
 					<div class="span4">
 						<div class="row-fluid text-right">
@@ -35,7 +37,8 @@
 					<div class="span12">
 						<h5 class="heading"> My Works</h5>
 						{% for i in values["shortfilms"] %}
-						<iframe src="{{ values["shortfilms"][i]["youtube_link"] }}?rel=0" height="225" width="300" frameborder="0" allowfullscreen></iframe>
+						<a href="../{{ values["shortfilms"][i]["name"] }}"><img src="./static/assets_posters/{{ values["shortfilms"][i]["name"] }}.jpg" ></a>
+						
 						<span>{{ values["shortfilms"][i]["name"] }}</span>
 						{% endfor %}
 					</div>

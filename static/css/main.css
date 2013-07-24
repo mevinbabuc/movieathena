@@ -46,11 +46,10 @@ body {
 	font-size: 2em;
 	text-transform: capitalize;
 }
-h5.heading{
+h5.heading {
 	font-size: 1.4em;
-	border:none;
+	border: none;
 	margin-top: 30px;
-	
 }
 .heading .icon-stack {
 	float: right;
@@ -59,7 +58,6 @@ h5.heading{
 .icon-stack .icon-star {
 	color: rgb(255, 224, 0);
 	font-size: 2em !important;
-	
 }
 .icon-stack .icon-value {
 	color: white;
@@ -120,7 +118,7 @@ span.input-icon #nav-search-icon {
 	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );*/*/
 
 }
-label em{
+label em {
 	color: red;
 }
 #landingPage div.welcome_text {
@@ -151,20 +149,19 @@ label em{
 	font-weight: 100;
 	letter-spacing: -1px;
 }
-input[type=text],textarea {
+input[type=text], textarea {
 	box-shadow: none;
 	border: none;
 	border-radius: none;
 	border-bottom: 1px dashed grey;
 }
-input[type=text]:hover, input[type=text]:focus,input:required:hover {
+input[type=text]:hover, input[type=text]:focus, input:required:hover {
 	box-shadow: none;
 }
-input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus{
-	box-shadow: none;
-	border-none;
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
+	box-shadow: none;border-none;
 }
-textarea{
+textarea {
 	border: 1px dashed grey;
 }
 .btn {
@@ -234,22 +231,29 @@ textarea{
 
 /*///////////////////////////////////////////////////Profile////*/
 
-#profile .profile_pic img{
+#profile .profile_pic img {
 	width: 100%;
-	border:3px white solid;
+	border: 3px white solid;
 	box-shadow: 0 0 3px #999;
 }
-#profile .profile_social_links a{
+#profile .profile_social_links a {
 	font-size: 1.4em;
 	color: #f89406;
 	text-decoration: none;
 	padding: 3px 10px;
+	-webkit-transition: .5s color;
 }
-#profile .profile_desc{
+#profile .profile_social_links a:hover, #profile .profile_social_links a:focus {
+	color: lightblue;
+}
+#profile .profile_desc {
 	text-indent: 50px;
 	text-align: justify;
 }
-
+#the_crew {
+	padding-top: 39px;
+	border-top: 1px solid rgb(255, 165, 0);
+}
 /*500*/
 .blue {
 	color: rgb(71, 143, 202) !important;

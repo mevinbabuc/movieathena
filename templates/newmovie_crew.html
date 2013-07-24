@@ -2,7 +2,7 @@
 
 {% block whole_width %}
 <div class="row-fluid">
-	<div class="span8 offset1">
+	<div class="span8 offset2">
 		<div class="alert alert-info">
 			<button type="button" class="close" data-dismiss="alert">
 				&times;
@@ -43,22 +43,27 @@
 			</div>
 			<div class="control-group" >
 				<div class="controls">
-					<input class="btn btn-warning" type="submit" value="Add" />
+					<input class="btn btn-warning" type="button" value="Add" />
 				</div>
 			</div>
 
-			<div id="the crew">
+			<div id="the_crew">
 				<div class="row-fluid">
-					<button type="button" class="close" data-dismiss="alert">
+					<button class="span1 close" type="button" data-dismiss="alert">
 						&times;
 					</button>
 					<div class="span2">
 						<img src="https://graph.facebook.com/mevinbabuc/picture?type=large" >
 					</div>
-					<div class="span10">
+					<div class="span9">
 						<h5 class="heading">Rohit Vincent (actor)</h5>
 						<small>acted as Bob</small>
 					</div>
+				</div>
+			</div>
+			<div class="control-group" >
+				<div class="controls">
+					<input class="btn btn-warning pull-right" type="submit" value="Add the crew to the Movie" />
 				</div>
 			</div>
 		</form>

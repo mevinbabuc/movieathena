@@ -184,18 +184,10 @@ def browse_movies_category(category):
 ##### Form submit urls
 ####
 
-@app.route('/login', methods=['POST'])
-def login():
-    email = "testing"
-    password = "testing"
-
-    # if request.method == 'POST':
-    #     if "email" in request.form:
-    #         email = request.form['email']
-    #     if "password" in request.form:
-    #         password = request.form['password']
-
-    return 'Login succesfull'
+@app.route('/newuser', methods=['POST'])
+def newuser():
+    values = {}
+    return render_template('newuser.html',values=values)
 
 @app.route('/signup')
 def sign_up():
