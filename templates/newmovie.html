@@ -3,7 +3,7 @@
 {% block whole_width %}
 <div class="row-fluid">
 	<div class="span8 offset1">
-		<form class="form-horizontal">
+		<form class="form-horizontal" action="/add/shortfilm">
 			<div class="control-group">
 				<label class="control-label" for="nm_moviename">Movie Name</label>
 				<div class="controls">
@@ -13,14 +13,14 @@
 			<div class="control-group">
 				<label class="control-label" for="nm_url">You Tube</label>
 				<div class="controls">
-					<input class="input-block-level" type="text" id="nm_url" name="youtubeurl" />
+					<input class="input-block-level" type="text" id="nm_url" name="youtube_url" value="{{ values["youtube_url"] }}"  />
 					<div class="movie-box"></div>
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="nm_poster">Posters</label>
 				<div class="controls">
-					<input type="file" id="nm_poster" name="youtubeurl" />
+					<input type="file" id="nm_poster" name="movie_poster" />
 					<div class="movie-box"></div>
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 			<div class="control-group">
 				<label class="control-label">Tags</label>
 				<div class="controls">
-					<select>
+					<select id="nm_tags" name="movie_tags" >
 						<option>Comedy</option>
 						<option>Drama</option>
 						<option>Action</option>
@@ -40,14 +40,12 @@
 			<div class="control-group">
 				<label class="control-label">Description</label>
 				<div class="controls">
-					<textarea rows="10" class="input-block-level" id="moviedesc" name="description"></textarea>
+					<textarea rows="10" class="input-block-level" id="nm_moviedesc" name="description"></textarea>
 				</div>
 			</div>
 			<div class="control-group">
 				<div class="controls">
-					<button type="submit" class="btn btn-warning">
-						Showcase my Movie
-					</button>
+					<input type="submit" class="btn btn-warning" value="Showcase my Movie" />
 				</div>
 			</div>
 			<!--type email address and name, if the person is not there on movieathena.

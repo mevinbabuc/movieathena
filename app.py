@@ -23,6 +23,7 @@ def landingPage():
 def showcase():
     values = {}
     values["body_prop"] =  "id=showcase"
+    values["youtube_url"]= request.args.get("youtube_url")
     return render_template('newmovie.html',values=values)
 @app.route('/addCrew')
 def addCrew():
@@ -32,6 +33,7 @@ def addCrew():
 def  testing():
     values = {}
     return render_template('facebook.html',values=values)
+    
 @app.route('/user/<username>')
 def show_user_profile(username=None):
     # show the user profile for that user
@@ -43,7 +45,7 @@ def show_user_profile(username=None):
     values["body_prop"] =  "id=profile"
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
         cur = con.cursor()
         cur.execute("select * from artists")
         artist = cur.fetchone()
@@ -86,7 +88,7 @@ def show_movie(urlmoviename):
     artists=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where name=%s",moviename)
@@ -122,7 +124,7 @@ def browse_movies():
     con=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms")
@@ -154,7 +156,7 @@ def browse_movies_category(category):
     con=""
 
     try:
-        con = mdb.connect('127.0.0.1', 'root','hello123', 'movieathena')
+        con = mdb.connect('127.0.0.1', 'root','123', 'movieathena')
         cur = con.cursor()
 
         cur.execute("select * from shortfilms where category=%s",category)
@@ -184,8 +186,8 @@ def browse_movies_category(category):
 ##### Form submit urls
 ####
 
-@app.route('/newuser', methods=['POST'])
-def newuser():
+@app.route('/login', methods=['POST'])
+def login():
     values = {}
     return render_template('newuser.html',values=values)
 
