@@ -14,7 +14,26 @@
 				<label class="control-label" for="nm_url">You Tube</label>
 				<div class="controls">
 					<input class="input-block-level" type="text" id="nm_url" name="youtube_url" value="{{ values["youtube_url"] }}"  />
-					<div class="movie-box"></div>
+					{% set youtube_url=values["youtube_url"] %}
+					{% if youtube_url!=None %}
+						{% if not youtube_url.startswith("http") %}
+
+							{% set embed=youtube_url.rsplit('=',1)[1] %}
+								<iframe src="http://www.youtube.com/embed/{{ embed }}" height="225" width="300" frameborder="0" allowfullscreen></iframe>
+							
+						{% else %}
+						 <script >
+						 	function load_youtube()
+						 	{
+						 		nm_url=$("#nm_url").live('click', function(event)
+								{
+								    event.preventDefault();  
+								    alert($(this).attr("href"));
+								});
+						 	load_youtube()
+						 </script>
+						{% endif %}
+					{% endif %}
 				</div>
 			</div>
 			<div class="control-group">

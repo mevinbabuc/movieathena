@@ -24,6 +24,7 @@ def showcase():
     values = {}
     values["body_prop"] =  "id=showcase"
     values["youtube_url"]= request.args.get("youtube_url")
+
     return render_template('newmovie.html',values=values)
 @app.route('/addCrew')
 def addCrew():
