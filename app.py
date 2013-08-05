@@ -187,8 +187,9 @@ def browse_movies_category(category):
 ##### Form submit urls
 ####
 
-@app.route('/login', methods=['POST'])
-def login():
+
+@app.route('/newuser')
+def newuser():
     values = {}
     return render_template('newuser.html',values=values)
 

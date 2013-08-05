@@ -159,7 +159,7 @@ input[type=text]:hover, input[type=text]:focus, input:required:hover {
 	box-shadow: none;
 }
 input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
-	box-shadow: none;border-none;
+	box-shadow: none;
 }
 textarea {
 	border: 1px dashed grey;

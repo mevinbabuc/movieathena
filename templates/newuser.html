@@ -8,11 +8,43 @@
 		</div>
 
 		<div class="span8">
-			
-			
+			<form class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="nu_name">Name</label>
+					<div class="controls">
+						<input disabled type="text" id="nu_name" name="name" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="nu_twitter">Twitter </label>
+					<div class="controls">
+						<input type="text" id="nu_twitter" name="name" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="nu_youtube">Youtube channel </label>
+					<div class="controls">
+						<input type="text" id="nu_youtube" name="name" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Description</label>
+					<div class="controls">
+						<textarea rows="10" class="input-block-level" id="moviedesc" name="description"></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<button type="submit" class="btn btn-warning">
+							Save my Profile
+						</button>
+					</div>
+				</div>
+				<!--type email address and name, if the person is not there on movieathena.
+				we'll send him a request through fb and mail -->
+			</form>
 		</div>
 	</div>
 </div>
-
 {% endblock %}
 
